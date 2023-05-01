@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    padding: 15px 0;
+    box-shadow: 0px 0px 10px 10px #00000012;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #6D28D9;
+    padding: 8px 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+/*Header End*/
+
+
+/*Sections*/
+section{
+    padding: 60px 30px;
+}
+
+.apresentacao{
+    display: flex;
+    flex-direction: row;
+}
+
+.apresentacao img{
+    height: 556px;
+    width: 518px;
+    object-fit: cover;
+}
+
+.apresentacao button{
+    padding: 10px 20px;
+    width: 310px;
+    text-transform: uppercase;
+    background-color: #b7ff00;
+    border: none;
+    font-size: 20px;
+    color: #6D28D9;
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.title{
+    margin-bottom: 30px;
+}
+
+.title h1{
+    text-transform: uppercase;
+    font-size: 48px;
+    color: #6D28D9;
+    line-height: 50px;
+    font-family: 'Righteous', cursive;
+    text-align: left;
+}
+
+.text p{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.section-title h2{
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+    padding: 0 30px;
+    color: #6D28D9;
+    font-size: 2rem;
+}
+
+.ciclos, .anos-escolares{
+    display: flex;
+    justify-content: space-between;
+}
+
+.anos-escolares-img{
+    width: 386px;
+    height: 386px;
+    object-fit: cover;
+}
+
+.ciclos-bloco h2, .ciclos-bloco p{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #6D28D9;
+    font-weight: 700;
+}
+
+.ciclos-bloco p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.ciclos-bloco{
+    padding: 0 15px;
+}
+
+.ciclos-bloco .orange{
+    color: #F47A14;
+}
+
+/*Sections End*/
+
+/*Footer*/
+footer{
+    background-color: #6D28D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container-footer ul{
+    padding: 5px 30px;
+    list-style: none;
+}
+
+.lista-links-footer a{
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.lista-links-footer{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/*Footer End*/
+
+/*Slider*/
+.slider{
+    margin: 0 auto;
+    width: 100vw;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid cyan;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: white;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: white;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: white;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: white;
+}
+/*Slider End*/
