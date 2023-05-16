@@ -1,24 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 /*navbar*/
 header{
-    padding: 5px 0;
-    box-shadow: 0px 0px 10px 10px #00000012;
-    position: fixed;
-    z-index: 1;
-    background-color: #FFF;
-    width: 100vw;
-}
-
-.header-container{
     display: flex;
     flex-direction: row;
+    padding: 5px;
+    box-shadow: 0px 0px 10px 10px #00000025;
+    position: fixed;
+    z-index: 2;
+    background-color: #FFF;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    width: 100%;
 }
 
 nav a{
@@ -37,10 +28,43 @@ nav a:hover{
     transition: 0.4s;
 }
 
+/*Slider text*/
+.slider-introduction-text{
+    position: absolute;
+    top: 160px;
+    right: 120px;
+    color: #FFF;
+    text-shadow: 0px 0px 2px black;
+    z-index: 1;
+}
+
+.slider-introduction-text h1{
+    font-size: 50px;
+}
+
+.slider-introduction-text ul{
+    list-style:inside;
+}
+
+.slider-introduction-text ul li{
+    padding: 10px;
+    font-size: 22px;
+}
+
+.slider-introduction-text button{
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    color: #6D28D9;
+    background-color: #b7ff00;
+    cursor: pointer;
+}
+
 /*css slider*/
 .slider{
-    width: 100vw;
-    height: 650px;
+    height: 630px;
     overflow: hidden;
 }
 
@@ -62,7 +86,7 @@ nav a:hover{
 .slide img{
     width: 100%;
     height: 668px;
-    filter : brightness(0.7);
+    filter : brightness(0.6);
     object-fit: cover;
 }
 
@@ -154,7 +178,7 @@ section{
     margin-bottom: 30px;
 }
 
-.page-content h1{
+.element-populated h1{
     text-transform: uppercase;
     font-size: 48px;
     color: #6D28D9;
@@ -163,7 +187,7 @@ section{
     text-align: left;
 }
 
-.page-content p{
+.text p{
     font-family: 'Poppins', sans-serif;
     margin-bottom: 1rem;
 }
@@ -176,6 +200,7 @@ section{
     font-size: 2rem;
 }
 
+/*Nossos ciclos*/
 .ciclos, .anos-escolares{
     display: flex;
     justify-content: space-between;
@@ -206,6 +231,10 @@ section{
 
 .ciclos-bloco .orange{
     color: #F47A14;
+}
+
+.ciclo-button button{
+    background-color: plum;
 }
 
 /*Formulario*/
@@ -250,18 +279,17 @@ section{
 /*css footer*/
 footer{
     background-color: #6D28D9;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     font-family: "Poppins";
-    padding: 20px 0 0 20px;
+    padding: 20px 20px 0 20px;
     color: #FFF;
 }
 
-.container-footer{
+.footer-container{
     margin-top: 10px;
     width: 100%;
     display: flex;
+    margin: 20px;
     justify-content: flex-start;
 }
 
@@ -281,6 +309,11 @@ footer{
 }
 
 .copyright{
-    width: 100vw;
     text-align: center;
+    padding-bottom: 10px;
 }
+
+/*.redes-sociais img{
+    width: 32px;
+    height: 32px;
+}*/
