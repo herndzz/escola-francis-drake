@@ -1,45 +1,78 @@
+:root{
+    --primary-color: #FFF;
+    --secondary-color: #6D28D9;
+    --third-color: #b7ff00;
+    --additional-color: #367334;
+}
+
+@keyframes showSidebar {
+    from{margin-right: -100vw}
+    to{margin-right: -10vw}
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
 /*navbar*/
-header{
+header, nav{
     display: flex;
     flex-direction: row;
-    padding: 5px;
+}
+
+header{
+    padding: .5rem 1.2rem;
     box-shadow: 0px 0px 10px 10px #00000025;
     position: fixed;
     z-index: 2;
-    background-color: #FFF;
+    background-color: var(--primary-color);
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    box-sizing: border-box;
+}
+
+nav{
+    animation-name: showsidebar;
+    animation-duration: 1s;
 }
 
 nav a{
-    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
-    color: #6D28D9;
-    padding: 8px 15px;
+    color: var(--secondary-color);
+    padding: .6rem .8rem;
     font-weight: bold;
-    font-size: 14px;
-    transition: 0.4s;
+    font-size: .9rem;
+    transition: 0.8s;
 }
 
 nav a:hover{
     color: palevioletred;
-    transition: 0.4s;
+    transition: 0.8s;
+}
+
+.navbar-btn, .navbar-close-btn{
+    display: none;
+    cursor: pointer;
 }
 
 /*Slider text*/
 .slider-introduction-text{
     position: absolute;
-    top: 160px;
-    right: 120px;
-    color: #FFF;
-    text-shadow: 0px 0px 2px black;
+    top: 11.5rem;
+    right: 8rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    text-shadow: 0px 0px 4px black;
     z-index: 1;
+    font-size: 18px;
 }
 
 .slider-introduction-text h1{
-    font-size: 50px;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .slider-introduction-text ul{
@@ -47,8 +80,7 @@ nav a:hover{
 }
 
 .slider-introduction-text ul li{
-    padding: 10px;
-    font-size: 22px;
+    padding: 10px 0;
 }
 
 .slider-introduction-text button{
@@ -57,9 +89,10 @@ nav a:hover{
     font-weight: bold;
     text-transform: uppercase;
     border: none;
-    color: #6D28D9;
-    background-color: #b7ff00;
+    color: var(--secondary-color);
+    background-color: var(--third-color);
     cursor: pointer;
+    padding: 5px;
 }
 
 /*css slider*/
@@ -91,7 +124,6 @@ nav a:hover{
 }
 
 /*css for manual slide navigation*/
-
 .navigation-manual{
     position: absolute;
     width: 100%;
@@ -125,7 +157,6 @@ nav a:hover{
 }
 
 /*css for automatic navigation*/
-
 .navigation-auto{
     position: absolute;
     display: flex;
@@ -147,42 +178,25 @@ nav a:hover{
 
 /*css sections*/
 section{
-    padding: 60px 30px;
+    padding: 1.5rem;
+    justify-content: space-between;
 }
 
 .introduction{
     display: flex;
     flex-direction: row;
+    padding-top: 3rem;
 }
 
-.introduction img{
-    height: 556px;
-    width: 518px;
-    object-fit: cover;
-}
-
-.introduction button{
-    padding: 10px 20px;
-    width: 310px;
-    text-transform: uppercase;
-    background-color: #b7ff00;
-    border: none;
-    font-size: 20px;
-    color: #6D28D9;
-    font-weight: 700;
-    margin-top: 30px;
-    cursor: pointer;
-}
-
-.title{
-    margin-bottom: 30px;
+.element-populated{
+    max-width: 50vw;
 }
 
 .element-populated h1{
     text-transform: uppercase;
-    font-size: 48px;
-    color: #6D28D9;
-    line-height: 50px;
+    font-size: 35px;
+    color: var(--secondary-color);
+    line-height: 35px;
     font-family: 'Righteous', cursive;
     text-align: left;
 }
@@ -190,33 +204,53 @@ section{
 .text p{
     font-family: 'Poppins', sans-serif;
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
-.section-title h2{
-    font-family: 'Righteous', cursive;
+.introduction button{
+    padding: 10px 20px;
+    width: 310px;
     text-transform: uppercase;
-    padding: 0 30px;
-    color: #6D28D9;
-    font-size: 2rem;
+    background-color: var(--third-color);
+    border: none;
+    font-size: 20px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.introduction img{
+    height: 40vw;
+    width: 40vw;
+    object-fit: cover;
 }
 
 /*Nossos ciclos*/
-.ciclos, .anos-escolares{
-    display: flex;
-    justify-content: space-between;
+.title{
+    margin-left: 5px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #6D28D9;
+    font-weight: 700;
 }
 
-.anos-escolares-img{
-    width: 386px;
-    height: 386px;
-    object-fit: cover;
+.ciclos{
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+    justify-content: center;
+
 }
 
 .ciclos-bloco h2, .ciclos-bloco p{
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-size: 24px;
-    color: #6D28D9;
+    color: var(--secondary-color);
     font-weight: 700;
 }
 
@@ -225,24 +259,47 @@ section{
     font-weight: 400;
 }
 
-.ciclos-bloco{
-    padding: 0 15px;
-}
-
 .ciclos-bloco .orange{
     color: #F47A14;
 }
 
+.ciclos-bloco{
+    cursor: pointer;
+    margin: 0 2rem;
+}
+
 .ciclo-button button{
     background-color: plum;
+    position: absolute;
+    margin-top: -8vw;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.anos-escolares-img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 /*Formulario*/
+.section-form{
+    background-color: var(--third-color);
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
 .form{
     background-color: #b8ff01;
     display: flex;
     flex-direction: column;
-    padding: 50px 200px;
+    align-items: center;
 }
 
 #title-form, #p-form, .form input{
@@ -254,31 +311,37 @@ section{
     font-size: 38px;
 }
 
-.form input{
+.form input, .form-select{
     margin: 10px 0;
     height: 40px;
     font-size: 18px;
+    outline: none;
+    max-width: 600px;
+    width: 80%;
 }
 
 #btn-form{
     height: 40px;
-    background-color: #6d28d9;
+    background-color: var(--secondary-color);
     border: none;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 22px;
+    cursor: pointer;
+    width: 300px;
 }
 
 .form div{
     display: flex;
     align-items: center;
     margin: 15px 0;
+    max-width: 600px;
 }
 
 /*css footer*/
 footer{
-    background-color: #6D28D9;
+    background-color: var(--secondary-color);
     align-items: flex-start;
     font-family: "Poppins";
     padding: 20px 20px 0 20px;
@@ -317,3 +380,50 @@ footer{
     width: 32px;
     height: 32px;
 }*/
+
+@media screen and (max-width: 870px) {
+    .introduction img{
+        display: none;
+    }
+
+    .element-populated{
+        max-width: 100%;
+    }
+
+    .navbar-btn, .navbar-close-btn{
+        display: block;
+    }
+
+    nav{
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: var(--primary-color);
+        height: 100vh;
+        width: 250px;
+        box-shadow: 0px 0px 10px 10px #00000025;
+        margin-right: -100vw;
+        animation-name: showsidebar;
+        animation-duration: 1s;
+    }
+
+    .navbar-close-btn{
+        margin: 16px 0;
+    }
+
+    .slider-introduction-text{
+        left: 8vw;
+        right: auto;
+    }
+
+    nav a{
+        font-size: 1.2rem;
+        padding: 15px 12px;
+    }
+
+    .ciclos{
+        flex-direction: column;
+    }
+}

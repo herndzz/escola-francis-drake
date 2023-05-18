@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,19 +21,23 @@
     <title>Home - Escola Francis Drake</title>
 </head>
 <body>
-    <header>
-        <a href="./index.html"><img src="./img/logo.png" alt="logo">
-        </a>
-            <nav>
-                <a href="#">Matricule-se</a>
-                <a href="#">Sobre</a>
-                <a href="#">Diferenciais</a>
-                <a href="#">Ciclos</a>
-                <a href="#">Unidades</a>
-                <a href="#">Blog</a>
-                <a href="#">Eventos</a>
-                <a href="#">Mais</a>
-            </nav>
+    <header id="header">
+        <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+        <nav id="navbar">
+            <svg onclick="toggleSidebar()" class="navbar-close-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+            <a href="#">Matricule-se</a>
+            <a href="#">Sobre</a>
+            <a href="#">Diferenciais</a>
+            <a href="#">Ciclos</a>
+            <a href="#">Blog</a>
+            <a href="#">Eventos</a>
+            <a href="#">Mais</a>
+        </nav>
+        <svg onclick="toggleSidebar()" class="navbar-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
     </header>
     <div class="slider-introduction-text">
         <h1>Matrículas Abertas <br> Julho / 2023</h1>
@@ -74,16 +78,15 @@
     <section class="introduction">
         <div class="element-populated">
             <div class="title">
-                <h1>Na Escola de Francis Drake, acreditamos que a educação é a chave para o sucesso e a felicidade.</h1>
+                <h1>Na Escola Francis Drake, acreditamos que a educação é a chave para os mais afortunados.</h1>
             </div>
             <div class="text">
                 <p>A Escola de Francis Drake está localizada em uma área tranquila e arborizada, em um bairro nobre da cidade. O prédio escolar é moderno e equipado com as mais recentes tecnologias educacionais, bem como espaços ao ar livre para os alunos explorarem.</p>
                 <p>A escola oferece um currículo completo, com foco em ciências, matemática, literatura, arte e música. As aulas são projetadas para serem interativas e envolventes, permitindo que os alunos explorem e descubram o mundo ao seu redor. A escola também oferece aulas de idiomas estrangeiros, programação e robótica.</p>
-                <p>A escola recebe alunos de todas as idades, desde o ensino infantil até o ensino médio. A Escola de Francis Drake busca alunos motivados e curiosos, que desejam aprender e crescer em um ambiente desafiador e estimulante.</p>
             </div>
             <button>Conheça Nossos Diferenciais</button>
         </div>
-        <img src="/img/stairs.jpg" alt="photo2">
+        <img src="/img/stairs.jpg">
     </section>
     <h2 class="title">Nossos Ciclos</h2>
     <section class="anos-escolares">
@@ -125,21 +128,28 @@
         <h2>O que os pais dizem sobre nós?</h2>
     </section>
     <!--formulario-->
-    <section class="form">
-        <h2 id="title-form">SE INTERESSOU?</h2>
-        <p id="p-form">Preencha o formulário para receber mais informações</p>
-        <input placeholder="Primeiro Nome do Aluno" type="text">
-        <input placeholder="Nome do Responsável" type="text">
-        <input placeholder="Sobrenome do Resposável" type="text">
-        <input placeholder="Telefone para Contato" type="text">
-        <input placeholder="E-mail" type="text">
-        <input placeholder="Unidade de Interesse" type="text">
-        <input placeholder="Série de Interesse" type="text">
-        <div>
-            <input type="checkbox">
-            <p>Declaro que li e concordo com a Política de Privacidade, bem como com o tratamento dos meus dados para fins de prospecção dos serviços educacionais prestados pela Escola Mais e demais instituições de ensino do mesmo grupo econômico.</p>
-        </div>
-        <button id="btn-form" type="submit">Assinar</button>
+    <section class="section-form">
+        <form class="form" action="">
+            <h2 id="title-form">SE INTERESSOU?</h2>
+            <p id="p-form">Preencha o formulário para receber mais informações</p>
+            <input placeholder="Primeiro Nome do Aluno" type="text">
+            <input placeholder="Nome do Responsável" type="text">
+            <input placeholder="Sobrenome do Resposável" type="text">
+            <input placeholder="Telefone para Contato" type="text">
+            <input placeholder="E-mail" type="text">
+            <!--<input placeholder="Série de Interesse" type="text">-->
+            <select class="form-select" id=serieEscolar>
+                <option value="">Série de Interesse:</option>
+                <option value="fundamental1">FUNDAMENTAL |</option>
+                <option value="fundamental2">FUNDAMENTAL ||</option>
+                <option value="ensinoMedio">ENSINO MÉDIO</option>
+            </select>
+            <div>
+                <input type="checkbox" style="width: auto; margin-right: 10px;">
+                <p>Declaro que li e concordo com a Política de Privacidade, bem como com o tratamento dos meus dados para fins de prospecção dos serviços educacionais prestados pela Escola Mais e demais instituições de ensino do mesmo grupo econômico.</p>
+            </div>
+            <button id="btn-form" type="submit">Assinar</button>
+        </form>
     </section>
     <!--final da pagina-->
     <footer>
@@ -153,7 +163,6 @@
                     <li><a href="">Fundamental |</a></li>
                     <li><a href="">Fundamental ||</a></li>
                     <li><a href="">Ensino Médio</a></li>
-                    <li><a href="">Unidades</a></li>
                     <li><a href="">Blog</a></li>
                     <li><a href="">Eventos</a></li>
                     <li><a href="">Uniformes</a></li>

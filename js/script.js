@@ -13,3 +13,23 @@ function nextImage(){
 
     document.getElementById("radio"+count).checked = true;
 }
+
+//navbar
+let header = document.getElementById('header');
+let navigationHeader = document.getElementById('navbar');
+let showSidebar = false;
+
+console.log(navigationHeader, header);
+
+function toggleSidebar(){
+    showSidebar = !showSidebar;
+    if(showSidebar){
+        navigationHeader.style.marginRight = '0';
+    } else {
+        navigationHeader.style.marginRight = '-100vw';
+    }
+}
+
+function hello(){
+    console.log('oi');
+}
