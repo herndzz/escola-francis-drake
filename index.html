@@ -8,8 +8,8 @@
     <script defer src="./js/script.js"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
 
     <!--Font Links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    
+    <!--Icon Links-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Home - Escola Francis Drake</title>
 </head>
 <body>
@@ -27,28 +30,23 @@
             <svg onclick="toggleSidebar()" class="navbar-close-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
             </svg>
-            <a href="#">Matricule-se</a>
-            <a href="#">Sobre</a>
-            <a href="#">Diferenciais</a>
-            <a href="#">Ciclos</a>
-            <a href="#">Blog</a>
-            <a href="#">Eventos</a>
-            <a href="#">Mais</a>
+            <a href="../pages/matricule-se.html">Matricule-se</a>
+            <a href="../pages/sobre.html">Sobre</a>
+            <a href="../pages/diferenciais.html">Diferenciais</a>
+            <a href="../pages/ciclos.html">Ciclos</a>
+            <a href="../pages/blog.html">Blog</a>
+            <a href="../pages/eventos.html">Eventos</a>
+            <a href="../pages/mais.html">Mais</a>
         </nav>
         <svg onclick="toggleSidebar()" class="navbar-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
         </svg>
     </header>
-    <div class="slider-introduction-text">
-        <h1>Matrículas Abertas <br> Julho / 2023</h1>
-        <ul>
-            <li>Período integral</li>
-            <li>Inglês todos os dias</li>
-            <li>Metodologias inovadoras</li>
-        </ul>
-        <p>E muito mais <br> Mensalidades a partir de R$ 980</p>
-        <button>GARANTA SUA VAGA</button>
-    </div>
+    <a class="btn-fixed" href="#header">
+        <span class="material-symbols-outlined">
+            arrow_upward
+        </span>
+    </a>
     <!--image slider start-->
     <div class="slider">
         <div class="slides">
@@ -75,6 +73,16 @@
             <label for="radio2" class="manual-btn"></label>
         </div>
     </div>
+    <div class="slider-introduction-text">
+        <h1>Matrículas Abertas <br> Julho / 2023</h1>
+        <ul>
+            <li>Período integral</li>
+            <li>Inglês todos os dias</li>
+            <li>Metodologias inovadoras</li>
+        </ul>
+        <p>E muito mais <br> Mensalidades a partir de R$ 980</p>
+        <a href="#section-form">GARANTA SUA VAGA</a>
+    </div>
     <section class="introduction">
         <div class="element-populated">
             <div class="title">
@@ -84,7 +92,7 @@
                 <p>A Escola de Francis Drake está localizada em uma área tranquila e arborizada, em um bairro nobre da cidade. O prédio escolar é moderno e equipado com as mais recentes tecnologias educacionais, bem como espaços ao ar livre para os alunos explorarem.</p>
                 <p>A escola oferece um currículo completo, com foco em ciências, matemática, literatura, arte e música. As aulas são projetadas para serem interativas e envolventes, permitindo que os alunos explorem e descubram o mundo ao seu redor. A escola também oferece aulas de idiomas estrangeiros, programação e robótica.</p>
             </div>
-            <button>Conheça Nossos Diferenciais</button>
+            <button onclick="link1()">Conheça Nossos Diferenciais</button>
         </div>
         <img src="/img/stairs.jpg">
     </section>
@@ -98,7 +106,7 @@
                     <img class="anos-escolares-img" src="img/fundamental1.jpeg" alt="Fundamental 1">
                 </div>
                 <div class="ciclo-button">
-                    <button>GARANTA SUA VAGA</button>
+                    <button onclick="link2()">GARANTA SUA VAGA</button>
                 </div>
             </div>
             <div class="ciclos-bloco">
@@ -108,7 +116,7 @@
                     <img class="anos-escolares-img" src="img/fundamental2.jpg" alt="Fundamental 2">
                 </div>
                 <div class="ciclo-button">
-                    <button>GARANTA SUA VAGA</button>
+                    <button onclick="link2()">GARANTA SUA VAGA</button>
                 </div>
             </div>
             <div class="ciclos-bloco">
@@ -118,17 +126,47 @@
                     <img class="anos-escolares-img" src="img/ensino-medio.jpg" alt="Ensino Médio">
                 </div>
                 <div class="ciclo-button">
-                    <button>GARANTA SUA VAGA</button>
+                    <button onclick="link2()">GARANTA SUA VAGA</button>
                 </div>
             </div>
         </div>
     </section>
-    <!--outro Slider-->
-    <section class="o-que-os-pais-dizem">
-        <h2>O que os pais dizem sobre nós?</h2>
-    </section>
+    <!--Slider com as fotos da escola
+    <h2>A infraestrutura da nossa escola</h2>
+    <div class="school-photo-slider">
+        <div class="school-photo-slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <div class="school-photo-first">
+                <img src="img/out-school.jpg" alt="">
+            </div>
+            <div class="school-photo-slide">
+                <img src="img/school-interior.jpg" alt="">
+            </div>
+            <div class="school-photo-slide">
+                <img src="img/out-school-night.avif" alt="">
+            </div>
+            <div class="school-photo-slide">
+                <img src="img/out-school2.jpg" alt="">
+            </div>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>-->
     <!--formulario-->
-    <section class="section-form">
+    <section id="section-form" class="section-form">
         <form class="form" action="">
             <h2 id="title-form">SE INTERESSOU?</h2>
             <p id="p-form">Preencha o formulário para receber mais informações</p>

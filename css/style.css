@@ -1,17 +1,41 @@
 :root{
-    --primary-color: #FFF;
-    --secondary-color: #6D28D9;
-    --third-color: #b7ff00;
-    --additional-color: #367334;
+    --primary-color: #f5f5f5;
+    --secondary-color: #4E55D9;
+    --third-color: #7ED994;
+    --additional-color: #7ED994;
 }
 
+.NFT-Market-Place-1-hex { color: #4E55D9; }
+.NFT-Market-Place-2-hex { color: #8491D9; }
+.NFT-Market-Place-3-hex { color: #BFC7D9; }
+.NFT-Market-Place-4-hex { color: #7ED994; }
+.NFT-Market-Place-5-hex { color: #7ED994; }
+
 @keyframes showSidebar {
-    from{margin-right: -100vw}
-    to{margin-right: -10vw}
+    0%{margin-right: -100vw}
+    100%{margin-right: -10vw}
 }
 
 html{
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.btn-fixed{
+    z-index: 10;
+    border: 1px solid blueviolet;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    visibility: hidden;
+}
+
+.btn-fixed.visibible{
+    visibility: visible;
 }
 
 /*navbar*/
@@ -83,7 +107,11 @@ nav a:hover{
     padding: 10px 0;
 }
 
-.slider-introduction-text button{
+.slider-introduction-text p{
+    padding-bottom: 20px;
+}
+
+.slider-introduction-text a{
     margin-top: 20px;
     font-size: 28px;
     font-weight: bold;
@@ -93,6 +121,8 @@ nav a:hover{
     background-color: var(--third-color);
     cursor: pointer;
     padding: 5px;
+    text-decoration: none; 
+    text-shadow: none;
 }
 
 /*css slider*/
@@ -233,14 +263,14 @@ section{
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-size: 24px;
-    color: #6D28D9;
+    color: var(--secondary-color);
     font-weight: 700;
 }
 
 .ciclos{
     display: flex;
     flex-direction: row;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
@@ -269,7 +299,6 @@ section{
 }
 
 .ciclo-button button{
-    background-color: plum;
     position: absolute;
     margin-top: -8vw;
     border: none;
@@ -287,6 +316,75 @@ section{
     border-radius: 5px;
 }
 
+/*school-photo-slider*/
+.school-photo-slider{
+    height: 500px;
+    overflow: hidden;
+    width: 1000px;
+}
+
+.school-photo-slides{
+    width: 400%;
+    height: 500px;
+    display: flex;
+}
+
+.school-photo-slides input{
+    display: none;
+}
+
+.school-photo-slide{
+    width: 100%;
+    transition: 2s;
+}
+
+.school-photo-slide img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/*css for manual slide navigation*/
+.navigation-manual{
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: chartreuse;
+}
+
+#radio1:checked ~ .school-photo-first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .school-photo-first{
+    margin-left: -35%;
+}
+
+#radio3:checked ~ .school-photo-first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .school-photo-first{
+    margin-left: -75%;
+}
+
 /*Formulario*/
 .section-form{
     background-color: var(--third-color);
@@ -296,7 +394,7 @@ section{
 }
 
 .form{
-    background-color: #b8ff01;
+    background-color: var(--third-color);
     display: flex;
     flex-direction: column;
     align-items: center;

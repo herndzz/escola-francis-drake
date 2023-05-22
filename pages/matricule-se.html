@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/smalllogo.png">
+    <script defer src="../js/script.js"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+    <!--Font Links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    <title>Home - Escola Francis Drake</title>
+</head>
+<body>
+    <header id="header">
+        <a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+        <nav id="navbar">
+            <svg onclick="toggleSidebar()" class="navbar-close-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+            <a href="../pages/matricule-se.html">Matricule-se</a>
+            <a href="../pages/sobre.html">Sobre</a>
+            <a href="../pages/diferenciais.html">Diferenciais</a>
+            <a href="../pages/ciclos.html">Ciclos</a>
+            <a href="../pages/blog.html">Blog</a>
+            <a href="../pages/eventos.html">Eventos</a>
+            <a href="../pages/mais.html">Mais</a>
+        </nav>
+        <svg onclick="toggleSidebar()" class="navbar-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+    </header>
+    <!--formulario-->
+    <section class="section-form">
+        <form class="form" action="">
+            <h2 id="title-form">SE INTERESSOU?</h2>
+            <p id="p-form">Preencha o formulário para receber mais informações</p>
+            <input placeholder="Primeiro Nome do Aluno" type="text">
+            <input placeholder="Nome do Responsável" type="text">
+            <input placeholder="Sobrenome do Resposável" type="text">
+            <input placeholder="Telefone para Contato" type="text">
+            <input placeholder="E-mail" type="text">
+            <!--<input placeholder="Série de Interesse" type="text">-->
+            <select class="form-select" id=serieEscolar>
+                <option value="">Série de Interesse:</option>
+                <option value="fundamental1">FUNDAMENTAL |</option>
+                <option value="fundamental2">FUNDAMENTAL ||</option>
+                <option value="ensinoMedio">ENSINO MÉDIO</option>
+            </select>
+            <div>
+                <input type="checkbox" style="width: auto; margin-right: 10px;">
+                <p>Declaro que li e concordo com a Política de Privacidade, bem como com o tratamento dos meus dados para fins de prospecção dos serviços educacionais prestados pela Escola Mais e demais instituições de ensino do mesmo grupo econômico.</p>
+            </div>
+            <button id="btn-form" type="submit">Assinar</button>
+        </form>
+    </section>
+    <!--final da pagina-->
+    <footer>
+        <img class="footer-logo" src="../img/logo2white.png" alt="logo">
+        <div class="footer-container">
+            <div class="container-footer-links">
+                <ul>
+                    <li><a href="">Matricule-se</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Diferenciais</a></li>
+                    <li><a href="">Fundamental |</a></li>
+                    <li><a href="">Fundamental ||</a></li>
+                    <li><a href="">Ensino Médio</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Eventos</a></li>
+                    <li><a href="">Uniformes</a></li>
+                    <li><a href="">E-books</a></li>
+                    <li><a href="">Carreiras</a></li>
+                    <li><a href="">Na Mídia</a></li>
+                    <li><a href="">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="outras-formas-de-contato">
+                <div class="telefones">
+                    <div class="telefone-box">
+                        <p>Minas Gerais:<br>(11) 5555-3725</p>
+                    </div>
+                    <div class="telefone-box">
+                        <p>São Paulo:<br>(47) 4003-6047</p>
+                    </div>
+                </div>
+                <!--<nav class="redes-sociais">
+                    <a href=""><img src="./icon/instagram.png"></a>
+                    <a href=""><img src="./icon/youtube.png"></a>
+                    <a href=""><img src="./icon/twitter.png"></a>
+                </nav>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Escola Francis Drake 2023 - Todos os direitos reservados©</p>
+        </div>
+    </footer>
+</body>
+</html>

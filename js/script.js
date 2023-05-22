@@ -33,3 +33,23 @@ function toggleSidebar(){
 function hello(){
     console.log('oi');
 }
+
+function link1(){
+    window.location.href = "../pages/diferenciais.html";
+};
+
+function link2(){
+    window.location.href = "../pages/matricule-se.html";
+}
+
+//btn-fixed
+const botao = document.querySelector('.btn-fixed');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY == 0) {
+        botao.classList.remove('visible');
+    } else {
+        botao.classList.add('visible');
+    }
+    console.log('yes, baby')
+});
