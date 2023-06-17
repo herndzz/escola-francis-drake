@@ -1,0 +1,59 @@
+/*Formulario*/
+section.form{
+    background-color: var(--third-color);
+    justify-content: center;
+    align-items: center;
+    padding: 5em 4em;
+}
+
+form.default{
+    background-color: var(--third-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div.containerTop{
+    font-family:'Poppins';
+    color:#6d28d9;
+    display:flex;
+    flex-direction: column;
+}
+
+.containerTop h2{
+    font-size:3rem;
+}
+
+/*Entradas*/
+form.default input, form.default select{
+    margin: 5px 0;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    max-width: 600px;
+    width: 80%;
+}
+
+form.default input[type="checkbox"]{
+    width: auto;
+    margin-right: 10px;
+}
+
+form.default div{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    max-width: 600px;
+}
+
+form.default button{
+    height: 40px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+    width: 300px;
+}

@@ -1,0 +1,272 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+:root{
+    --primary-color: #f5f5f5;
+    --secondary-color: #4E55D9;
+    --third-color: #7ED994;
+    --additional-color: #7ED994;
+}
+
+@keyframes showSidebar {
+    0%{margin-right: -100vw}
+    100%{margin-right: -10vw}
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+/*.btn-fixed{
+    z-index: 10;
+    border: 1px solid blueviolet;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    visibility: hidden;
+}
+.btn-fixed.visibible{
+    visibility: visible;
+}*/
+
+/*Cabeçalho*/
+header, nav{
+    display: flex;
+    flex-direction: row;
+}
+
+header{
+    padding: .5rem 1.2rem;
+    box-shadow: 0px 0px 10px 10px #00000025;
+    position: fixed;
+    z-index: 2;
+    background-color: var(--primary-color);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav{
+    animation-name: showsidebar;
+    animation-duration: 1s;
+}
+
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    padding: .6rem .8rem;
+    font-weight: bold;
+    font-size: .9rem;
+    transition: 0.8s;
+}
+
+nav a:hover{
+    color: palevioletred;
+    transition: 0.8s;
+}
+
+.navbar-btn, .navbar-close-btn{
+    display: none;
+    cursor: pointer;
+}
+
+/*Padronização dos tópicos*/
+section{
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+/*Informativo*/
+.objective{
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+}
+
+.objective .container{
+    max-width: 50vw;
+}
+
+.objective .container h2{
+    text-transform: uppercase;
+    font-size: 35px;
+    color: var(--secondary-color);
+    line-height: 35px;
+    font-family: 'Righteous', cursive;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.objective .container div p{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.objective button{
+    padding: 10px 20px;
+    width: 310px;
+    text-transform: uppercase;
+    background-color: var(--third-color);
+    border: none;
+    font-size: 20px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.objective img{
+    height: 40vw;
+    width: 40vw;
+    object-fit: cover;
+}
+
+/*Formação educacional*/
+.anosEscolares h3{
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.formations{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.formations .bloc{
+    margin: 1em 1.5em;
+}
+
+.formations .bloc h2, .formations .bloc p{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.formations .bloc p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.formations .bloc .orange{
+    color: #F47A14;
+}
+
+.formations .bloc img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.formations .bloc button{
+    position: absolute;
+    margin-top: -8vw;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/*css footer*/
+footer{
+    background-color: var(--secondary-color);
+    align-items: flex-start;
+    font-family: "Poppins";
+    padding: 20px 20px 0 20px;
+    color: #FFF;
+}
+
+.footer-container{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    margin: 20px;
+    justify-content: flex-start;
+}
+
+.container-footer-links ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container-footer-links a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 10px;
+    color: #FFF;
+}
+
+.copyright{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/*Responsividade*/
+@media screen and (max-width: 870px) {
+    .objective img{
+        display: none;
+    }
+
+    .objective .container{
+        max-width: 100%;
+    }
+
+    .navbar-btn, .navbar-close-btn{
+        display: block;
+    }
+
+    nav{
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: var(--primary-color);
+        height: 100vh;
+        width: 250px;
+        box-shadow: 0px 0px 10px 10px #00000025;
+        margin-right: -100vw;
+        animation-name: showsidebar;
+        animation-duration: 1s;
+    }
+
+    .navbar-close-btn{
+        margin: 16px 0;
+    }
+
+    .sliderContainer{
+        left: 8vw;
+        right: auto;
+    }
+
+    nav a{
+        font-size: 1.2rem;
+        padding: 15px 12px;
+    }
+
+    .ciclos{
+        flex-direction: column;
+    }
+}

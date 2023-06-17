@@ -4,39 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./img/smalllogo.png">
-    <script defer src="./js/script.js"></script>
-
-    <!--CSS-->
-    <link rel="stylesheet" href="./css/reset.css" type="text/css">
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
-
-    <!--Font Links-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
-    
-    <!--Icon Links-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Home - Escola Francis Drake</title>
+    <link rel="icon" type="image/png" href="assets/img/smalllogo.png"> <!--Imagem do 'title'-->
+
+    <!--Módulos CSS-->
+    <link rel="stylesheet" href="assets/css/form.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/slider.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <script defer src="assets/js/script.js"></script>
 </head>
 <body>
     <header id="header">
-        <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+        <a href="index.html"><img src="assets/img/logo.png" alt="logoNavbar"></a>
         <nav id="navbar">
             <svg onclick="toggleSidebar()" class="navbar-close-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
             </svg>
-            <a href="../pages/matricule-se.html">Matricule-se</a>
-            <a href="../pages/sobre.html">Sobre</a>
-            <a href="../pages/diferenciais.html">Diferenciais</a>
-            <a href="../pages/ciclos.html">Ciclos</a>
-            <a href="../pages/blog.html">Blog</a>
-            <a href="../pages/eventos.html">Eventos</a>
-            <a href="../pages/mais.html">Mais</a>
+            <a href="/pages/matricule-se.html">Matricule-se</a>
+            <a href="/pages/sobre.html">Sobre</a>
+            <a href="/pages/diferenciais.html">Diferenciais</a>
+            <a href="/pages/ciclos.html">Ciclos</a>
+            <a href="/pages/blog.html">Blog</a>
+            <a href="/pages/eventos.html">Eventos</a>
+            <a href="/pages/mais.html">Mais</a>
         </nav>
         <svg onclick="toggleSidebar()" class="navbar-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -47,33 +38,31 @@
             arrow_upward
         </span>
     </a>
-    <!--image slider start-->
-    <div class="slider">
+    <!--Inicio do slider-->
+    <div class="slider" style="padding-top: 40px;">
         <div class="slides">
-            <!--radio buttons start-->
             <input type="radio" name="radio-btn" id="radio1">
             <input type="radio" name="radio-btn" id="radio2">
-            <!--slide images start-->
+            <!--Imagens-->
             <div class="slide first">
-                <img src="img/img1.jpg" alt="">
+                <img src="assets/img/img1.jpg" alt="">
             </div>
             <div class="slide">
-                <img src="img/img2.jpg" alt="">
+                <img src="assets/img/img2.jpg" alt="">
             </div>
-            <!--Slider text-->
-            <!--automatic navigation start-->
+            <!--Navegação automática-->
             <div class="navigation-auto">
                 <div class="auto-btn1"></div>
                 <div class="auto-btn2"></div>
             </div>
         </div>
-        <!--manual navigation start-->
+        <!--Navegação manual-->
         <div class="navigation-manual">
             <label for="radio1" class="manual-btn"></label>
             <label for="radio2" class="manual-btn"></label>
         </div>
     </div>
-    <div class="slider-introduction-text">
+    <div class="sliderContainer">
         <h1>Matrículas Abertas <br> Julho / 2023</h1>
         <ul>
             <li>Período integral</li>
@@ -83,115 +72,76 @@
         <p>E muito mais <br> Mensalidades a partir de R$ 980</p>
         <a href="#section-form">GARANTA SUA VAGA</a>
     </div>
-    <section class="introduction">
-        <div class="element-populated">
-            <div class="title">
-                <h1>Na Escola Francis Drake, acreditamos que a educação é a chave para os mais afortunados.</h1>
-            </div>
-            <div class="text">
+    <!--Objetivo/Valores-->
+    <section class="objective">
+        <div class="container">
+            <h2>Na Escola Francis Drake, acreditamos que a educação é a chave para os mais afortunados.</h2>
+            <div>
                 <p>A Escola de Francis Drake está localizada em uma área tranquila e arborizada, em um bairro nobre da cidade. O prédio escolar é moderno e equipado com as mais recentes tecnologias educacionais, bem como espaços ao ar livre para os alunos explorarem.</p>
                 <p>A escola oferece um currículo completo, com foco em ciências, matemática, literatura, arte e música. As aulas são projetadas para serem interativas e envolventes, permitindo que os alunos explorem e descubram o mundo ao seu redor. A escola também oferece aulas de idiomas estrangeiros, programação e robótica.</p>
             </div>
             <button onclick="link1()">Conheça Nossos Diferenciais</button>
         </div>
-        <img src="/img/stairs.jpg">
+        <img src="assets/img/stairs.jpg">
     </section>
-    <h2 class="title">Nossos Ciclos</h2>
-    <section class="anos-escolares">
-        <div class="ciclos">
-            <div class="ciclos-bloco">
+    <!--Opções de matrícula-->
+    <section class="anosEscolares">
+        <h3>Nossos Ciclos</h3>
+        <div class="formations">
+            <div class="bloc">
                 <h2>Fundamental |</h2>
                 <p>do 1º ao 5º ano</p>
                 <div>
-                    <img class="anos-escolares-img" src="img/fundamental1.jpeg" alt="Fundamental 1">
+                    <img src="assets/img/fundamental1.jpeg" alt="Fundamental 1">
                 </div>
-                <div class="ciclo-button">
-                    <button onclick="link2()">GARANTA SUA VAGA</button>
-                </div>
+                <button onclick="link2()">GARANTA SUA VAGA</button>
             </div>
-            <div class="ciclos-bloco">
+            <div class="bloc">
                 <h2 class="orange">Fundamental ||</h2>
                 <p class="orange">do 6º ao 9º ano</p>
                 <div>
-                    <img class="anos-escolares-img" src="img/fundamental2.jpg" alt="Fundamental 2">
+                    <img src="assets/img/fundamental2.jpg" alt="Fundamental 2">
                 </div>
-                <div class="ciclo-button">
-                    <button onclick="link2()">GARANTA SUA VAGA</button>
-                </div>
+                <button onclick="link2()">GARANTA SUA VAGA</button>
             </div>
-            <div class="ciclos-bloco">
+            <div class="bloc">
                 <h2>Ensino Médio</h2>
                 <p>da 1º à 3º série</p>
                 <div>
-                    <img class="anos-escolares-img" src="img/ensino-medio.jpg" alt="Ensino Médio">
+                    <img src="assets/img/ensino-medio.jpg" alt="Ensino Médio">
                 </div>
-                <div class="ciclo-button">
-                    <button onclick="link2()">GARANTA SUA VAGA</button>
-                </div>
+                <button onclick="link2()">GARANTA SUA VAGA</button>
             </div>
         </div>
     </section>
-    <!--Slider com as fotos da escola
-    <h2>A infraestrutura da nossa escola</h2>
-    <div class="school-photo-slider">
-        <div class="school-photo-slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <div class="school-photo-first">
-                <img src="img/out-school.jpg" alt="">
+    <!--Formulario-->
+    <section class="form" id="section-form">
+        <form class="default" action="">
+            <div class="containerTop">
+                <h2>SE INTERESSOU?</h2>
+                <p>Preencha o formulário para receber mais informações</p>
             </div>
-            <div class="school-photo-slide">
-                <img src="img/school-interior.jpg" alt="">
-            </div>
-            <div class="school-photo-slide">
-                <img src="img/out-school-night.avif" alt="">
-            </div>
-            <div class="school-photo-slide">
-                <img src="img/out-school2.jpg" alt="">
-            </div>
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-        </div>
-        <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-        </div>
-    </div>-->
-    <!--formulario-->
-    <section id="section-form" class="section-form">
-        <form class="form" action="">
-            <h2 id="title-form">SE INTERESSOU?</h2>
-            <p id="p-form">Preencha o formulário para receber mais informações</p>
-            <input placeholder="Primeiro Nome do Aluno" type="text">
-            <input placeholder="Nome do Responsável" type="text">
-            <input placeholder="Sobrenome do Resposável" type="text">
-            <input placeholder="Telefone para Contato" type="text">
-            <input placeholder="E-mail" type="text">
-            <!--<input placeholder="Série de Interesse" type="text">-->
-            <select class="form-select" id=serieEscolar>
+            <input type="text" placeholder="Primeiro Nome do Aluno">
+            <input type="text" placeholder="Nome do Responsável">
+            <input type="text" placeholder="Sobrenome do Resposável">
+            <input type="tel" placeholder="Telefone para Contato">
+            <input type="email" placeholder="E-mail">
+            <select id=serieEscolar>
                 <option value="">Série de Interesse:</option>
-                <option value="fundamental1">FUNDAMENTAL |</option>
-                <option value="fundamental2">FUNDAMENTAL ||</option>
+                <option value="fundamental1">FUNDAMENTAL I</option>
+                <option value="fundamental2">FUNDAMENTAL II</option>
                 <option value="ensinoMedio">ENSINO MÉDIO</option>
             </select>
             <div>
-                <input type="checkbox" style="width: auto; margin-right: 10px;">
+                <input type="checkbox">
                 <p>Declaro que li e concordo com a Política de Privacidade, bem como com o tratamento dos meus dados para fins de prospecção dos serviços educacionais prestados pela Escola Mais e demais instituições de ensino do mesmo grupo econômico.</p>
             </div>
-            <button id="btn-form" type="submit">Assinar</button>
+            <button type="submit">Assinar</button>
         </form>
     </section>
-    <!--final da pagina-->
+    <!--Parte inferior-->
     <footer>
-        <img class="footer-logo" src="img/logo2white.png" alt="logo">
+        <img class="footer-logo" src="assets/img/logo2white.png" alt="logo">
         <div class="footer-container">
             <div class="container-footer-links">
                 <ul>
@@ -219,11 +169,6 @@
                         <p>São Paulo:<br>(47) 4003-6047</p>
                     </div>
                 </div>
-                <!--<nav class="redes-sociais">
-                    <a href=""><img src="./icon/instagram.png"></a>
-                    <a href=""><img src="./icon/youtube.png"></a>
-                    <a href=""><img src="./icon/twitter.png"></a>
-                </nav>-->
             </div>
         </div>
         <div class="copyright">
