@@ -1,0 +1,51 @@
+/* Form Style Component */
+.section-form{
+    background-color: var(--third-color);
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.form{
+    background-color: var(--third-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title-form, #p-form, .form input{
+    font-family: 'Poppins';
+    color: #6d28d9;
+}
+
+#title-form{
+    font-size: 38px;
+}
+
+.form input, .form-select{
+    margin: 10px 0;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    max-width: 600px;
+    width: 80%;
+}
+
+#btn-form{
+    height: 40px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+    width: 300px;
+}
+
+.form div{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    max-width: 600px;
+}

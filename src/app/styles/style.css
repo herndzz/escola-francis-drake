@@ -1,0 +1,133 @@
+:root{
+    --primary-color: #f5f5f5;
+    --secondary-color: #4E55D9;
+    --third-color: #7ED994;
+    --additional-color: #7ED994;
+}
+
+.NFT-Market-Place-1-hex { color: #4E55D9; }
+.NFT-Market-Place-2-hex { color: #8491D9; }
+.NFT-Market-Place-3-hex { color: #BFC7D9; }
+.NFT-Market-Place-4-hex { color: #7ED994; }
+.NFT-Market-Place-5-hex { color: #7ED994; }
+
+@keyframes showSidebar {
+    0%{margin-right: -100vw}
+    100%{margin-right: -10vw}
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.btn-fixed{
+    z-index: 10;
+    border: 1px solid blueviolet;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    visibility: hidden;
+}
+
+.btn-fixed.visibible{
+    visibility: visible;
+}
+
+/*Slider text*/
+.slider-introduction-text{
+    position: absolute;
+    top: 11.5rem;
+    right: 8rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    text-shadow: 0px 0px 4px black;
+    z-index: 1;
+    font-size: 18px;
+}
+
+.slider-introduction-text h1{
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.slider-introduction-text ul{
+    list-style:inside;
+}
+
+.slider-introduction-text ul li{
+    padding: 10px 0;
+}
+
+.slider-introduction-text p{
+    padding-bottom: 20px;
+}
+
+.slider-introduction-text a{
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    color: var(--secondary-color);
+    background-color: var(--third-color);
+    cursor: pointer;
+    padding: 5px;
+    text-decoration: none; 
+    text-shadow: none;
+}
+
+/*css sections*/
+section{
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+.introduction{
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+}
+
+.element-populated{
+    max-width: 50vw;
+}
+
+.element-populated h1{
+    text-transform: uppercase;
+    font-size: 35px;
+    color: var(--secondary-color);
+    line-height: 35px;
+    font-family: 'Righteous', cursive;
+    text-align: left;
+}
+
+.text p{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.introduction button{
+    padding: 10px 20px;
+    width: 310px;
+    text-transform: uppercase;
+    background-color: var(--third-color);
+    border: none;
+    font-size: 20px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.introduction img{
+    height: 40vw;
+    width: 40vw;
+    object-fit: cover;
+}

@@ -1,0 +1,87 @@
+/* Pathway Style Component */
+.title{
+    margin-left: 5px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.ciclos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ciclos-bloco h2, .ciclos-bloco p{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.ciclos-bloco p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.ciclos-bloco .orange{
+    color: #F47A14;
+}
+
+.ciclos-bloco{
+    cursor: pointer;
+    margin: 0 2rem;
+}
+
+.ciclo-button button{
+    position: absolute;
+    margin-top: -8vw;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.anos-escolares-img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Images Style */
+.school-photo-slider{
+    height: 500px;
+    overflow: hidden;
+    width: 1000px;
+}
+
+.school-photo-slides{
+    width: 400%;
+    height: 500px;
+    display: flex;
+}
+
+.school-photo-slides input{
+    display: none;
+}
+
+.school-photo-slide{
+    width: 100%;
+    transition: 2s;
+}
+
+.school-photo-slide img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}

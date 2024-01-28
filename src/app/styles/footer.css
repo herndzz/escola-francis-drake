@@ -1,0 +1,28 @@
+/* Footer Style Component */
+.footer-container{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    margin: 20px;
+    justify-content: flex-start;
+}
+
+.container-footer-links ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container-footer-links a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 10px;
+    color: #FFF;
+}
+
+.copyright{
+    text-align: center;
+    padding-bottom: 10px;
+}
